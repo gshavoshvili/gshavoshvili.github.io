@@ -1,0 +1,67 @@
+ <!-- jQuery Version 1.11.0 -->
+    <script src="{{ "/js/jquery-1.11.0.js" }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ "/js/bootstrap.min.js" }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ "/js/jquery.easing.min.js" }}"></script>
+    <script src="{{ "/js/classie.js" }}"></script>
+    <script src="{{ "/js/cbpAnimatedHeader.js" }}"></script>
+
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    
+    <script>
+        $(function() {var $grid = $('.portfolio-grid');
+
+        $grid.imagesLoaded(function() {$grid.isotope({
+            // options
+            itemSelector: '.portfolio-item',
+            layoutMode: 'fitRows',
+            percentPosition: true
+        });
+
+        $('.filter-button-group').on( 'click', 'button:not(.collapsor)', function() {
+            var filterValue = $(this).attr('data-filter');
+            if (filterValue === '*') {
+                $grid.isotope({filter: '*'})
+            }
+            else {
+                $grid.isotope({ filter: '.' + filterValue });
+            }
+           
+        });});
+        
+
+        // Needs to capture initial width while absolute and invisible for toggle, can't start at 0 width  
+        $('.collapsor').siblings('.collapsable').animate({
+            width:'toggle'
+        }, 0).css({position:'static', visibility:'visible'})
+
+        $('.collapsor').click(function () {
+            var $this = $(this);
+            $this.siblings('.collapsable').animate({
+            width:'toggle'
+            }, 400,'swing',function() {
+               
+                $this.find('i.fa').toggleClass('fa-angle-right').toggleClass('fa-angle-left');
+            })
+		}); });
+    </script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{{ "/js/jqBootstrapValidation.js" }}"></script>
+    {% if site.contact == "static" %}
+    <script src="{{ "/js/contact_me_static.js" }}"></script>
+    {% else %}
+     <script src="{{ "/js/contact_me.js" }}"></script>
+    {% endif %}
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ "/js/freelancer.js" }}"></script>
+
+    {% if site.contact == "disqus" %}
+    <!-- Disqus Stuff -->
+    {% include js_disqus.html %}
+    {% endif %}

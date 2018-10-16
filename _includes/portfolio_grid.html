@@ -1,0 +1,111 @@
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Portfolio</h2>
+                    
+                </div>
+            </div>
+            <div class="filter-button-group btn-toolbar">
+                    <div class="btn-group">
+                            <button class="btn btn-primary " data-filter="*">All</button>
+                        </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-primary " data-filter="html">HTML</button>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <button class="btn btn-primary " data-filter="css">CSS</button>
+                        
+                        <div class="btn-group collapsable">
+                                <button class="btn btn-primary " data-filter="sass">SASS</button>
+                                
+                        </div>
+                        <button class="btn btn-primary collapsor" ><b><i class="fa fa-angle-right"></i></b></button>
+                        
+                </div>
+
+                    <div class="btn-group">
+                            <button class="btn btn-primary " data-filter="bootstrap">Bootstrap</button>
+                        </div>
+
+
+                    
+                    <div class="btn-group">
+                        <button class="btn btn-primary " data-filter="javascript">JavaScript</button>
+                        
+                        <div class="btn-group collapsable">
+                                <button class="btn btn-primary " data-filter="jquery">JQuery</button>
+                        </div>
+                        <button class="btn btn-primary collapsor" ><b><i class="fa fa-angle-right"></i></b></button>
+                        
+                </div>
+                    
+
+                    <!-- <div class="btn-group">
+                            <button class="btn btn-primary " data-filter="html5">React</button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button class="btn btn-primary " data-filter="html5">Redux</button>
+                        </div> -->
+
+                    <div class="btn-group">
+                            <button class="btn btn-primary " data-filter="php">PHP</button>
+                        </div>
+                    
+                        <div class="btn-group">
+                                <button class="btn btn-primary " data-filter="wordpress">WordPress</button>
+                            </div>    
+
+                        
+                        <div class="btn-group">
+                                <button class="btn btn-primary " data-filter="nodejs">Node JS</button>
+                                
+                                <div class="btn-group collapsable">
+                                        <!--button class="btn btn-primary " data-filter="html5">Express</button-->
+                                        <button class="btn btn-primary " data-filter="socketio">Socket.IO</button>
+                                </div>
+                                <button class="btn btn-primary collapsor" ><b><i class="fa fa-angle-right"></i></b></button>
+                                
+                        </div> 
+
+                        <div class="btn-group">
+                            <button class="btn btn-primary " data-filter="csharp">C#</button>
+                        </div>   
+
+                        <div class="btn-group">
+                            <button class="btn btn-primary " data-filter="java">Java</button>
+                        </div>   
+      
+
+             
+
+               
+                    
+            </div>
+            
+            <div class="row portfolio-grid">
+                {% for item in site.data.projects %}
+                    <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item{%for tag in item.tags%} {{tag}}{% endfor %}">
+                        <a href="#portfolioModal-{{ item.id }}" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/portfolio/{{ item.id }}.png" class="img-responsive" alt="{{ item.name }}">
+                            </div>
+                            
+                            <h3 class="text-center h4 title">{{ item.title }}</h3>
+                            
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>

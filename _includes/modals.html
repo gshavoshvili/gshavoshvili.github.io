@@ -1,0 +1,80 @@
+ <!-- Portfolio Modals -->
+ {% for item in site.data.projects %}
+    <div class="portfolio-modal modal fade" id="portfolioModal-{{ item.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div>
+        <div class="modal-content container">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row modal-body">
+                    
+                    <div class="col-sm-6 project-pics">
+                        <img src="img/portfolio/{{ item.id }}.png" class="img-responsive img-centered" alt="{{ item.alt }}">
+                    </div>
+                    <div class="col-sm-6  text-left project-info">
+                        <table class="table table-striped  ">
+                            <tbody>
+                                <tr>
+                                    <th>Title: </th>
+                                    <td>{{item.title}}</td>
+                                </tr>
+                                
+                                
+                                
+                                
+
+                                
+
+                                {% if item.stack.frontend %}
+                                <tr>
+                                    <th>Front-End: </th>
+                                    <td>{{item.stack.frontend}}</td>
+                                </tr>
+                                {% endif %}
+
+                                {% if item.stack.backend %}
+                                <tr>
+                                        <th>Back-End: </th>
+                                        <td>{{item.stack.backend}}</td>
+                                </tr>
+                                {% endif %}
+                                
+
+                                {% if item.features %}
+                                <tr>
+                                    <th>Features: </th>
+                                    <td>{{item.features}}</td>
+                                </tr>
+                                {% endif %}
+
+                                {% if item.url %}
+                                <tr>
+                                    <th>URL: </th>
+                                    <td><a href="{{item.url}}" target="_blank">{{item.url}}</a></td>
+                                </tr>
+                                {% endif %}
+                                {% if item.source %}
+                                <tr>
+                                    <th>Source: </th>
+                                    <td><a href="{{item.source | replace: "<br>", "" }}" target="_blank">{{item.source}}</a></td>
+                                </tr>
+                                {% endif %}
+
+                            </tbody>
+                        </table>
+
+                        
+                    </div>
+                    
+                    
+                </div>
+                    
+            </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

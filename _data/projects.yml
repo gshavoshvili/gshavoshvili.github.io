@@ -1,0 +1,61 @@
+- id: pnh
+  title: Подворье на Хуторской
+  url: http://podvorie39.com
+  stack: 
+    frontend: HTML5, CSS3 (SASS), Bootstrap, JavaScript, JQuery
+    backend: PHP, WordPress 
+  tags: 
+    - html
+    - css
+    - sass
+    - bootstrap
+    - javascript
+    - jquery
+    - php
+    - wordpress 
+  features: "Responsive Design"
+
+- id: pewpew
+  title: Pew Pew Online
+  url: https://gsh-pewpewonline.herokuapp.com/
+  source: https://github.com/gshavoshvili/<br>PewPewOnline
+  stack: 
+    frontend: JavaScript, HTML Canvas
+    backend: Node JS, Socket.IO
+  tags: 
+    - javascript
+    - nodejs
+    - socketio 
+  features: "WebSockets, SAT Collision"
+
+- id: kdrn
+  title: Рынок Недвижимости
+  url: http://kdrn.ru
+  stack: 
+    frontend: HTML5, CSS3, Bootstrap, JavaScript, JQuery
+    backend: PHP, WordPress 
+  tags: 
+    - html
+    - css
+    - bootstrap
+    - javascript
+    - jquery
+    - php
+    - wordpress 
+  features: "Apartment Selection, Responsive Design"
+  
+    
+
+
+
+- id: pcgs
+  title: PC Game Shop
+  url: http://pcgameshop.ucoz.ru/
+  stack:  
+    frontend:  HTML, CSS, JavaScript, JQuery 
+    backend: uCoz 
+  tags: 
+    - html
+    - css
+    - javascript
+    - jquery
