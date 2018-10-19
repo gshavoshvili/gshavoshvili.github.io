@@ -15,18 +15,7 @@
     - wordpress 
   features: "Responsive Design"
 
-- id: pewpew
-  title: Pew Pew Online
-  url: https://gsh-pewpewonline.herokuapp.com/
-  source: https://github.com/gshavoshvili/<br>PewPewOnline
-  stack: 
-    frontend: JavaScript, HTML Canvas
-    backend: Node JS, Socket.IO
-  tags: 
-    - javascript
-    - nodejs
-    - socketio 
-  features: "WebSockets, SAT Collision"
+
 
 - id: kdrn
   title: Рынок Недвижимости
@@ -59,3 +48,27 @@
     - css
     - javascript
     - jquery
+
+
+- id: pewpew
+  title: Pew Pew Online
+  url: https://gsh-pewpewonline.herokuapp.com/
+  source: https://github.com/gshavoshvili/PewPewOnline
+  stack: 
+    frontend: JavaScript, HTML Canvas
+    backend: Node JS, Socket.IO
+  tags: 
+    - javascript
+    - nodejs
+    - socketio 
+  features: "WebSockets, SAT Collision"
+
+- id: snake
+  title: Snake
+  download: https://github.com/gshavoshvili/snake/raw/master/Snake.jar
+  source: https://github.com/gshavoshvili/snake 
+  stack: 
+    language: Java
+  tags: 
+    - java
+  
