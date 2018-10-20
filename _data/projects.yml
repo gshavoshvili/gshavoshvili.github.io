@@ -35,8 +35,6 @@
   
     
 
-
-
 - id: pcgs
   title: PC Game Shop
   url: http://pcgameshop.ucoz.ru/
@@ -48,6 +46,7 @@
     - css
     - javascript
     - jquery
+
 
 
 - id: pewpew
@@ -62,6 +61,20 @@
     - nodejs
     - socketio 
   features: "WebSockets, SAT Collision"
+
+
+
+- id: checkers
+  title: Universal Checkers
+  download: https://github.com/gshavoshvili/UniversalCheckers/raw/master/Checkers.exe
+  source: https://github.com/gshavoshvili/UniversalCheckers
+  stack: 
+    language: C#
+  tags: 
+    - csharp
+  features: "Configurable Rules"
+
+
 
 - id: snake
   title: Snake
