@@ -651,3 +651,25 @@ $button-hover-bg: hsla(210, 50%, 19%, 1);
 .scroll-top .btn {
     padding: 7px;
 }
+
+#contact-success, #contact-error {
+    display: none;
+    font-size: 17px;
+    line-height: 1.8;
+
+    strong {
+        font-size:18px;
+        margin-bottom:8px;
+        display:inline-block;
+    }
+}
+
+#contact-success strong {
+    color: hsla(120, 100%, 35%, 1);
+}
+#contact-error {
+    margin-bottom: 20px;
+    strong {
+    color: hsla(0, 100%, 35%,1);
+    }
+}
